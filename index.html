@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blanc Coming Soon</title>
+    <link rel="stylesheet" href="./lib/loco.css">
+    <script src="./lib/loco.min.js"></script>
+</head>
+
+<body>
+
+    <div data-scroll-container>
+        <div data-scroll-section>
+            <!-- <h2 id="stateof" data-scroll data-scroll-speed="1">State of</h2> -->
+            <!-- <h1 id="blanc" data-scroll data-scroll-speed="9">blanc</h1> -->
+            <img id="stateof" src="./assests/text_stateof.png" alt="" data-scroll data-scroll-speed="1">
+            <img id="blanc" src="./assests/text_blanclogo.png" alt="" data-scroll data-scroll-speed="3">
+        </div>
+        <div id="write-up-section" data-scroll-section>
+            <div class="flexcont">
+                <div class="text-content">
+                    <div id="logo-cont"> <img id="logo" src="./assests/logo.png" alt=""></div>
+
+                    <br />
+                    We believe in the power of conscious consumption so much that we've even named our house after the
+                    footprint we aim to have - Blanc.
+                    <br />
+                    Blanc employs eco-friendly and sustainable materials in all its products. There is no hint of
+                    plastic or unethically sourced. From the first step of production to every inch of the fabric cut
+                    out at Blanc, you'll feel like you're part of something important.
+                    <br />
+                    Don't forget - you control your wardrobe, lifestyle, and life.
+                    <br /> <br />
+                    Reach out to us and stay tuned!
+                    <div class="contact-form">
+                        <form action="https://mailthis.to/you@mail.com" method="POST">
+                            <!-- <input type="text" name="name" placeholder="Your name"> -->
+                            <input type="email" name="_replyto" placeholder="Your email">
+                            <input type="submit" value="Stay in the loop">
+                        </form>
+                    </div>
+                </div>
+                <div class="image-cont">
+                    <img src="./assests/IMG_2418.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+        <div id="foreground">
+            <img id="heroImg" src="./assests/foreground_blanc.png" alt="">
+        </div>
+    </div>
+
+    <style>
+        .hidden {
+            opacity: 0;
+        }
+
+        .visible {
+            opacity: 1;
+            transition: opacity 1s ease-out;
+        }
+
+        html.has-scroll-smooth {
+            overflow: hidden;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+
+        body {
+            background: #C6C4B9;
+            margin: 0;
+            font-family: heln;
+
+        }
+
+        .scroll-container {
+            overflow-x: hidden;
+        }
+
+        @font-face {
+            font-family: heln;
+            src: url(./assests/HelveticaNeue\ Regular.ttf);
+        }
+
+
+        #heroImg {
+            position: fixed;
+            bottom: -10%;
+            width: 100vw;
+            z-index: 1;
+        }
+
+
+        #blanc {
+            width: 50%;
+            float: right;
+            padding-right: 10%;
+        }
+
+        #stateof {
+            /* font-size: 20em; */
+            width: 70%;
+            padding-top: 10%;
+            padding-bottom: 10%;
+            padding-left: 10%;
+        }
+
+        #write-up-section {
+            background-color: #242E33;
+            padding: 2em 2em;
+            /* height: 100vh; */
+            position: relative;
+            z-index: 10;
+            margin-top: 90vh;
+        }
+
+        .flexcont {
+
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            /* width: 90vw; */
+            padding-top: 1em;
+        }
+
+        .flexcont img {
+            width: 60%;
+        }
+
+        .image-cont {
+            display: flex;
+            justify-content: center;
+        }
+
+        #logo {
+            margin-bottom: 2em;
+        }
+
+        .text-content {
+
+            padding: 0 10%;
+            color: white;
+            flex-basis: 1;
+        }
+
+        .contact-form {
+            padding-top: 5%;
+        }
+
+        .contact-form input {
+            padding: .5em .6em;
+        }
+
+        @media only screen and (max-width: 900px) {
+
+            #heroImg {
+                position: fixed;
+                bottom: 0;
+                width: auto;
+                height: 80vh;
+                left: 50%;
+                margin-left: -60vh;
+                z-index: 1;
+            }
+
+            #blanc {
+                padding-top: 40%;
+            }
+
+            #stateof {
+                padding-top: 60%;
+            }
+
+            #write-up-section {
+                margin-top: 71vh;
+            }
+
+            .flexcont {
+                flex-direction: column-reverse;
+            }
+
+            .text-content {
+
+                padding-top: 10%;
+            }
+            #logo-cont{
+                display: flex;
+                justify-content: center;
+            }
+ 
+            .contact-form input{
+                margin-top: 1em;
+            }
+        }
+    </style>
+
+    <script>
+        window.addEventListener("load", function (event) {
+            const lazyScroll = new LocomotiveScroll({
+                el: document.querySelector('[data-scroll-container]'),
+                smooth: true,
+                // smartphone: {
+                //     smooth: true
+                // },
+                // mobile: {
+                //     smooth: true
+                // },
+                tablet: {
+                    smooth: true
+                }
+            })
+            document.body.className = 'visible';
+        });
+
+
+    </script>
+</body>
+
+</html>
