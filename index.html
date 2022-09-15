@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blanc Coming Soon</title>
+    <title>BLANC | Coming Soon</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./lib/loco.css">
     <script src="./lib/loco.min.js"></script>
 </head>
@@ -19,14 +20,17 @@
             <img id="stateof" src="./assests/text_stateof.png" alt="" data-scroll data-scroll-speed="1">
             <img id="blanc" src="./assests/text_blanclogo.png" alt="" data-scroll data-scroll-speed="3">
         </div>
+        <!-- _________________________________Section2_____________________________________ -->
         <div id="write-up-section" data-scroll-section>
             <div class="flexcont">
                 <div class="text-content">
+                    <!-- Logo -->
                     <div id="logo-cont"> <img id="logo" src="./assests/logo.png" alt=""></div>
-
+                    <div id="coming-soon">Coming soon!</div>
                     <br />
                     We believe in the power of conscious consumption so much that we've even named our house after the
                     footprint we aim to have - Blanc.
+                    <br />
                     <br />
                     Blanc employs eco-friendly and sustainable materials in all its products. There is no hint of
                     plastic or unethically sourced. From the first step of production to every inch of the fabric cut
@@ -36,11 +40,19 @@
                     <br /> <br />
                     Reach out to us and stay tuned!
                     <div class="contact-form">
-                        <form action="https://mailthis.to/you@mail.com" method="POST">
+                        <form action="https://mailthis.to/contact@blanc.co.in" method="POST">
                             <!-- <input type="text" name="name" placeholder="Your name"> -->
                             <input type="email" name="_replyto" placeholder="Your email">
                             <input type="submit" value="Stay in the loop">
                         </form>
+                    </div>
+                    <div class="socials">
+                        <br />
+                        Follow us
+
+                        <a id="instabtn" target="_blank" href="https://www.instagram.com/blanc.earth"><i
+                                class="ri-instagram-line"></i></a>
+
                     </div>
                 </div>
                 <div class="image-cont">
@@ -49,12 +61,34 @@
             </div>
 
         </div>
+        <!-- _______________________Foreground______________________ -->
         <div id="foreground">
             <img id="heroImg" src="./assests/foreground_blanc.png" alt="">
         </div>
     </div>
 
     <style>
+        #instabtn {
+            background-color: #3A4A52;
+            padding-top: 8px;
+            padding-left: 6px;
+            padding-right: 6px;
+            border-radius: 8px;
+            font-size: 1.3em;
+            text-decoration: none;
+            vertical-align: middle;
+            margin-left: 4px;
+            color: white;
+        }
+
+        .socials {
+            font-size: 1.4em;
+        }
+
+        #instabtn:visited {
+            color: white;
+        }
+
         .hidden {
             opacity: 0;
         }
@@ -90,6 +124,10 @@
             src: url(./assests/HelveticaNeue\ Regular.ttf);
         }
 
+        #coming-soon {
+            font-size: 3em;
+            text-transform: uppercase;
+        }
 
         #heroImg {
             position: fixed;
@@ -159,6 +197,13 @@
             padding: .5em .6em;
         }
 
+        .contact-form input[type=submit] {
+
+            background-color: #3A4A52;
+            border-color: white;
+            color: white;
+        }
+
         @media only screen and (max-width: 900px) {
 
             #heroImg {
@@ -191,12 +236,13 @@
 
                 padding-top: 10%;
             }
-            #logo-cont{
+
+            #logo-cont {
                 display: flex;
                 justify-content: center;
             }
- 
-            .contact-form input{
+
+            .contact-form input {
                 margin-top: 1em;
             }
         }
